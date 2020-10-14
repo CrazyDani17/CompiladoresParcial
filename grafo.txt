@@ -1,0 +1,123 @@
+digraph G {
+  Inicio -> {E FuncionPrincipal K}
+  E -> {DeclaracionFuncion Ep1}
+  DeclaracionFuncion -> {mision identificador "(" Parametros ")" "{" CuerpoF "}" }
+  Parametros -> {Y "Y'"}
+  Y -> {TipoDato id C}
+  TipoDato -> numero
+  "C" -> "''"
+  "Y'" -> Z
+  Z[label = "''"]
+  CuerpoF -> {Cuerpo J}
+  Cuerpo -> {DeclaracionVariable "D'"}
+  TD [label="TipoDato"]
+  id2 [label="identificador"]
+  DeclaracionVariable -> {TD id2 Corchetes OPI}
+  n[label="numero"]
+  TD -> n
+  v1[label = "''"]
+  Corchetes -> v1
+  OPI -> {"=" Expresion}
+  Expresion -> Ex
+  Ex -> {Tx "Ex'"}
+  Tx -> literal
+  "Ex'" -> {Simbolo Txc Rc}
+  Txc -> {id3 Op}
+  Op -> v2
+  Rc -> v3
+  "D'" -> v4
+  J -> {devuelve Expresion2}
+  Expresion2 -> Ex2
+  Ex2 -> {Tx2 Exp2}
+  Tx2 -> {identificador2 Op2}
+  Op2 -> v5
+  Exp2 -> v6
+  Ep1 -> v7
+  Simbolo -> "+"
+  FuncionPrincipal -> {llama pizquierdo pderecho lizquierdo Cuerpo2 lderecho}
+  Cuerpo2 -> {DeclaracionVariable2 Dp2}
+  DeclaracionVariable2 -> {TipoDato2 identificador3 Corchetes2 OPI2}
+  TipoDato2 -> pinocho
+  Corchetes2 -> v8
+  OPI2 -> {igual Expresion3}
+  Expresion3 -> Ex3
+  Ex3 -> {Tx5 Exp5}
+  Tx5 -> mentira
+  Exp5 -> v9
+  Dp2 -> {Sentencias5 Dp3}
+  Sentencias5 -> {mostrar pizquierdo2 Expresion5 pderecho2}
+  Expresion5 -> Ex4
+  Ex4 -> {Tx4 Exp4}
+  Tx4 -> {identificador7 Op7}
+  Op7 -> {llizquierda ParaLLamados llderecha}
+  ParaLLamados -> {PL "PL'"}
+  PL -> Expresion9
+  Expresion9 -> Ex9
+  Ex9 -> {Tx9 Exp9}
+  Tx9 -> {identificador9 Op9}
+  Op9 -> va2
+  Exp9 -> va3
+  "PL'" -> va4
+  Exp4 -> va5
+  Dp3 -> va6
+  K -> va7
+  id [label="identificador"]
+  v3[label="''"]
+  v4[label="''"]
+  v5[label="''"]
+  v6[label="''"]
+  v7[label="''"]
+  v8[label="''"]
+  v9[label="''"]
+  va2[label="''"]
+  va3[label="''"]
+  va4[label="''"]
+  va5[label="''"]
+  va6[label="''"]
+  va7[label="''"]
+  igual[label="="]
+  Rc[label="Ex'"]
+  Txc[label="Tx"]
+  Expresion2[label="Expresion"]
+  id3[label=identificador]
+  v2[label = "''"]
+  Ex2[label ="Ex"]
+  Tx2[label="Tx"]
+  Exp2[label="Ex'"]
+  identificador2[label="identificador"]
+  Op2[label="Op"]
+  DeclaracionVariable2[label="DeclaracionVarible"]
+  pizquierdo[label="("]
+  pderecho[label=")"]
+  lizquierdo[label="{"]
+  lderecho[label="}"]
+  Cuerpo2[label="Cuerpo"]
+  Dp2[label="D'"]
+  Ep1[label="E'"]
+  TipoDato2[label="TipoDato"]
+  identificador3[label="identificador"]
+  Corchetes2[label="Corchetes"]
+  OPI2[label="OPI"]
+  Expresion3[label="Expresion"]
+  Ex3[label="Ex"]
+  Tx5[label="Tx"]
+  Exp5[label="Ex'"]
+  Dp3[label="D'"]
+  Sentencias5[label="Sentencias"]
+  pizquierdo2[label="("]
+  Expresion5[label="Expresion"]
+  pderecho2[label=")"]
+  Ex4[label="Ex"]
+  Tx4[label="Tx"]
+  Exp4[label="Ex'"]
+  identificador7[label="identificador"]
+  Op7[label="Op"]
+  llizquierda[label="("]
+  llderecha[label=")"]
+  Expresion9[label="Expresion"]
+  Ex9[label="Ex"]
+  Tx9[label="Tx"]
+  Exp9[label="Ex'"]
+  identificador9[label="identificador"]
+  Op9[label="Op"]
+}
