@@ -1,0 +1,136 @@
+digraph dot{
+  "Inicio" -> FuncionPrincipal
+   
+   FuncionPrincipal -> {llama p1 p1_ l1 Cuerpo l1_ }
+   Cuerpo -> {DeclaracionVariable "D'"}
+   DeclaracionVariable -> {TipoDato identificador Corchetes OPI}
+   TipoDato -> numero
+   Corchetes -> e1
+   OPI -> "="
+   OPI -> Expresion
+   Expresion -> Ex
+   Ex -> {Tx "Ex'"} 
+   Tx -> literal
+   "Ex'" -> e2
+   "D'" -> {Sentencias d_e}
+   d_e -> { s_e d_e2}
+   d_e2 -> e12
+   s_e -> { mostrar p4 ex5 p4_}
+   ex5 -> t4
+   t4 -> { T7 E8 }
+   T7 -> { id7 o3 }
+   o3 -> e10
+   E8 -> e11
+   Sentencias -> { Y_ p2 ex p2_ l2 MuchasSentenciasYoyo l2_ }
+   ex -> t
+   t -> {T_ E_}
+   T_ -> {id2 Op}
+   Op -> "' '"
+   E_ -> {Simbolo T2 E2}
+   Simbolo -> "<"
+   T2 -> li
+   E2 -> e3
+   MuchasSentenciasYoyo -> { SentenciasYoyo "M'"}
+   SentenciasYoyo -> { si p3 ex3 p3_ sy sino sy2 }
+   "M'" -> e4
+   ex3 -> t2
+   t2 -> { T3 E3}
+   T3 -> { id3 o_}
+   o_ -> e5
+   E3 -> {s_ T4 E5}
+   T4 -> li2
+   s_ -> "%"
+   E5 -> e6
+   sy -> { l3 my l3_ }
+   my -> sy3
+   sy3 -> { id4 e_o }
+   e_o -> { ig  ex4 }
+   ex4 -> t3
+   t3 -> { T5 E6 }
+   T5 -> { id6  o2 }
+   o2 -> e7
+   E6 -> { s2 T6 E7 }
+   s2 -> "+"
+   T6 -> li3
+   E7 -> e8
+   sy2 -> { l4 my2 l4_ }
+   my2 -> { sy4 ms }
+   sy4 -> descansito
+   ms -> e9
+li [label = literal]
+   li2 [label = literal]
+   li3 [label = literal]
+   sy [label = SentenciasYoyo]
+   sy2 [label = SentenciasYoyo]
+   sy3 [label = SentenciasYoyo]
+   sy4 [label = SentenciasYoyo]
+   my [label = MuchasSentenciasYoyo]
+   my2 [label = MuchasSentenciasYoyo]
+   ms [label = "M'"]
+   o_ [label = "Op"]
+   o2 [label = "Op"]
+   o3 [label = "Op"]
+   s_ [label = "Simbolo"]
+   s2 [label = "Simbolo"]
+   e1 [label="' '"]
+   e2 [label="' '"]
+   e3 [label="' '"]
+   e4 [label="' '"]
+   e5 [label="' '"]
+   e6 [label="' '"]
+   e7 [label="' '"]
+   e8 [label="' '"]
+   e9 [label="' '"]
+   e10 [label="' '"]
+   e11 [label="' '"]
+   e12 [label="' '"]
+   t [label="Ex"]
+   t2 [label="Ex"]
+   t3 [label="Ex"]
+   t4 [label="Ex"]
+   p1 [label="("]
+   p2 [label="("]
+   p3 [label="("]
+   p4 [label="("]
+   p1_ [label=")"]
+   p2_ [label=")"]
+   p3_ [label=")"]
+   p4_ [label=")"]
+   l1 [label="{"]
+   l2 [label="{"]
+   l3 [label="{"]
+   l4 [label="{"]
+   l1_ [label="}"]
+   l2_ [label="}"]
+   l3_ [label="}"]
+   l4_ [label="}"]
+   ex [label="Expresion"]
+   ex3 [label="Expresion"]
+   ex4 [label="Expresion"]
+   ex5 [label="Expresion"]
+   T_ [label = "Tx"]
+   T2 [label = "Tx"]
+   T3 [label = "Tx"]
+   T4 [label = "Tx"]
+   T5 [label = "Tx"]
+   T6 [label = "Tx"]
+   T7 [label = "Tx"]
+   E_ [label = "Ex'"]
+   E2 [label = "Ex'"]
+   E3 [label = "Ex'"]
+   E5 [label = "Ex'"]
+   E6 [label = "Ex'"]
+   E7 [label = "Ex'"]
+   E8 [label = "Ex'"]
+   id2 [label="identificador"]
+   id3 [label="identificador"]
+   id4 [label="identificador"]
+   id6 [label="identificador"]
+   id7 [label="identificador"]
+   d_e [label="D'"]
+   d_e2 [label="D'"]
+   s_e [label="Sentencias"]
+   Y_ [label="yoyo"]
+   ig [label = "="]
+   e_o [label=OPS]
+}

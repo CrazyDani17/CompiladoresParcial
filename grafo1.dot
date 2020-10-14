@@ -1,0 +1,99 @@
+digraph dot{
+  "Inicio" -> FuncionPrincipal
+   FuncionPrincipal -> {llama p1 p1_ l1 Cuerpo l1_ }
+   Cuerpo -> {DeclaracionVariable "D'"}
+   DeclaracionVariable -> {TipoDato identificador Corchetes OPI}
+   TipoDato -> numero
+   Corchetes -> e1
+   OPI -> "="
+   OPI -> Expresion
+   Expresion -> Ex
+   Ex -> {Tx "Ex'"} 
+   Tx -> literal
+   "Ex'" -> e2
+   s_e [label="Sentencias"]
+   "D'" -> {Sentencias d_e}
+   d_e -> { s_e d_e2}
+   d_e2 -> e12
+   s_e -> { mostrar p4 ex5 p4_}
+   ex5 -> t4
+   t4 -> { T7 E8 }
+   T7 -> { id7 o3 }
+   o3 -> e10
+   E8 -> e11
+   Y_ [label="yoyo"]
+   Sentencias -> { Y_ p2 ex p2_ l2 MuchasSentenciasYoyo l2_ }
+   ex -> t
+   t -> {T_ E_}
+   T_ -> {id2 Op}
+   Op -> "' '"
+   E_ -> {Simbolo T2 E2}
+   Simbolo -> "=="
+   T2 -> li
+   E2 -> e3
+   MuchasSentenciasYoyo -> { SentenciasYoyo "M'"}
+   SentenciasYoyo -> { id4 OPS}
+   OPS-> igual
+   OPS -> ex4 
+   "M'" -> e4 
+   T5 -> id6
+   T5 -> o2
+   o2 -> e9 
+   t3 -> T5
+   t3 ->E5 
+   ex4 -> t3
+   E5 -> s_
+   s_ -> mas
+   E5 -> T6
+   E5 -> E7
+   E7 -> e1_1
+   T6 -> li2
+   li [label = literal]
+   li2 [label = literal]
+   o2 [label = "Op"]
+   o3 [label = "Op"]
+   s_ [label = "Simbolo"]
+   e1 [label="' '"]
+   e2 [label="' '"]
+   e3 [label="' '"]
+   e4 [label="' '"]
+   e9 [label="' '"]
+   e10 [label="' '"]
+   e11 [label="' '"]
+   e12 [label="' '"]
+   e1_1 [label="' '"]
+   t [label="Ex"]
+   t3 [label="Ex"]
+   t4 [label="Ex"]
+   p1 [label="("]
+   p2 [label="("]
+   p4 [label="("]
+   p1_ [label=")"]
+   p2_ [label=")"]
+   p4_ [label=")"]
+   l1 [label="{"]
+   l2 [label="{"]
+   l1_ [label="}"]
+   l2_ [label="}"]
+   ex [label="Expresion"]
+   ex4 [label="Expresion"]
+   ex5 [label="Expresion"]
+   T_ [label = "Tx"]
+   T2 [label = "Tx"]
+   T5 [label = "Tx"]
+   T6 [label = "Tx"]
+   T7 [label = "Tx"]
+   E_ [label = "Ex'"]
+   E2 [label = "Ex'"]
+   E5 [label = "Ex'"]
+   E7 [label = "Ex'"]
+   E8 [label = "Ex'"]
+   id2 [label="identificador"]
+   id4 [label="identificador"]
+   id6 [label="identificador"]
+   id7 [label="identificador"]
+   mas [label="+"]
+   igual [label="="] 
+   d_e [label="D'"]
+   d_e2 [label="D'"]
+}
